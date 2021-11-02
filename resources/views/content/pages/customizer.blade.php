@@ -1,10 +1,10 @@
 {{-- BEGIN: Customizer --}}
 <div class="customizer d-none d-md-block">
 
-  <a class="customizer-toggle d-flex align-items-center justify-content-center" href="javascript:void(0);">
+  <!-- <a class="customizer-toggle d-flex align-items-center justify-content-center" href="javascript:void(0);">
     <i class="spinner" data-feather="settings">
     </i>
-  </a>
+  </a> -->
 
   <div class="customizer-content">
     <!-- Customizer header -->

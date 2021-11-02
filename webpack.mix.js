@@ -1,6 +1,6 @@
 const mix = require('laravel-mix')
 const exec = require('child_process').exec
-require('dotenv').config()
+
 
 /*
  |--------------------------------------------------------------------------
@@ -12,9 +12,9 @@ require('dotenv').config()
  | file for the application as well as bundling up all the JS files.
  |
  */
- mix.browserSync('127.0.0.1:8000');
 
-const glob = require('glob')
+
+
 const path = require('path')
 
 /*
@@ -22,6 +22,7 @@ const path = require('path')
  | Vendor assets
  |--------------------------------------------------------------------------
  */
+ const glob = require('glob')
 
 function mixAssetsDir(query, cb) {
   ;(glob.sync('resources/' + query) || []).forEach(f => {
@@ -71,6 +72,9 @@ mix.copyDirectory('resources/data', 'public/data')
 mix
   .js('resources/js/core/app-menu.js', 'public/js/core')
   .js('resources/js/core/app.js', 'public/js/core')
+  .js('resources/js/scripts/request-partner/request-partner-crud.js', 'public/js/scripts/request-partner')
+  .js('resources/js/scripts/content-management/content-management-crud.js', 'public/js/scripts/content-management')
+  .js('resources/js/scripts/content-management/content-management-function.js', 'public/js/scripts/content-management')
   .sass('resources/sass/core.scss', 'public/css', {sassOptions})
   .sass('resources/sass/overrides.scss', 'public/css', {sassOptions})
   .sass('resources/sass/base/custom-rtl.scss', 'public/css', {sassOptions})

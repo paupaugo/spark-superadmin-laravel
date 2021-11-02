@@ -1,6 +1,9 @@
 {
     "/js/core/app-menu.js": "/js/core/app-menu.js",
     "/js/core/app.js": "/js/core/app.js",
+    "/js/scripts/request-partner/request-partner-crud.js": "/js/scripts/request-partner/request-partner-crud.js",
+    "/js/scripts/content-management/content-management-crud.js": "/js/scripts/content-management/content-management-crud.js",
+    "/js/scripts/content-management/content-management-function.js": "/js/scripts/content-management/content-management-function.js",
     "/css/base/plugins/extensions/ext-component-ratings.css": "/css/base/plugins/extensions/ext-component-ratings.css",
     "/css/base/plugins/extensions/ext-component-media-player.css": "/css/base/plugins/extensions/ext-component-media-player.css",
     "/css/base/plugins/extensions/ext-component-drag-drop.css": "/css/base/plugins/extensions/ext-component-drag-drop.css",
@@ -130,7 +133,6 @@
     "/js/scripts/pages/page-pricing.js": "/js/scripts/pages/page-pricing.js",
     "/js/scripts/pages/page-profile.js": "/js/scripts/pages/page-profile.js",
     "/js/scripts/pagination/components-pagination.js": "/js/scripts/pagination/components-pagination.js",
-    "/js/scripts/request-partner/request-partner-crud.js": "/js/scripts/request-partner/request-partner-crud.js",
     "/js/scripts/tables/table-ag-grid.js": "/js/scripts/tables/table-ag-grid.js",
     "/js/scripts/tables/table-datatables-advanced.js": "/js/scripts/tables/table-datatables-advanced.js",
     "/js/scripts/tables/table-datatables-basic.js": "/js/scripts/tables/table-datatables-basic.js",

@@ -14,9 +14,7 @@ class CreateRequestPartnersTable extends Migration
     public function up()
     {
         Schema::create('request_partners', function (Blueprint $table) {
-            $table->id('owner_id');
-            $table->string('name');
-            $table->string('email')->unique();
+            $table->id();
             $table->timestamps();
         });
     }

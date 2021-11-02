@@ -16,6 +16,11 @@ use App\Http\Controllers\MiscellaneousController;
 use App\Http\Controllers\AuthenticationController;
 use App\Http\Controllers\ChartsController;
 use App\Http\Controllers\RequestPartnerController;
+use App\Http\Controllers\AnalyticsController;
+use App\Http\Controllers\RequestBookerController;
+use App\Http\Controllers\ContentManagementController;
+use App\Http\Controllers\SettingController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,15 +34,15 @@ use App\Http\Controllers\RequestPartnerController;
 */
 
 // Main Page Route
-// Route::get('/', [DashboardController::class,'dashboardEcommerce'])->name('dashboard-ecommerce')->middleware('verified');
-Route::get('/', [DashboardController::class,'dashboardEcommerce'])->name('dashboard-ecommerce');
+Route::get('/', [DashboardController::class,'dashboardEcommerce'])->name('dashboard-ecommerce')->middleware('verified');
+// Route::get('/', [DashboardController::class,'dashboardEcommerce'])->name('dashboard-ecommerce');
 
 Auth::routes(['verify' => true]);
 
 /* Route Dashboards */
 Route::group(['prefix' => 'dashboard'], function () {
   Route::get('analytics', [DashboardController::class,'dashboardAnalytics'])->name('dashboard-analytics');
-  Route::get('ecommerce', [DashboardController::class,'dashboardEcommerce'])->name('dashboard-ecommerce');
+  // Route::get('ecommerce', [DashboardController::class,'dashboardEcommerce'])->name('dashboard-ecommerce');
 });
 /* Route Dashboards */
 
@@ -184,8 +189,8 @@ Route::group(['prefix' => 'page'], function () {
   Route::get('profile', [PagesController::class,'profile'])->name('page-profile');
   Route::get('faq', [PagesController::class,'faq'])->name('page-faq');
   Route::get('knowledge-base', [PagesController::class,'knowledge_base'])->name('page-knowledge-base');
-  Route::get('knowledge-base/category', [PagesController::class,'kb_category'])->name('page-knowledge-base');
-  Route::get('knowledge-base/category/question', [PagesController::class,'kb_question'])->name('page-knowledge-base');
+  // Route::get('knowledge-base/category', [PagesController::class,'kb_category'])->name('page-knowledge-base');
+  // Route::get('knowledge-base/category/question', [PagesController::class,'kb_question'])->name('page-knowledge-base');
   Route::get('pricing', [PagesController::class,'pricing'])->name('page-pricing');
   Route::get('blog/list', [PagesController::class,'blog_list'])->name('page-blog-list');
   Route::get('blog/detail', [PagesController::class,'blog_detail'])->name('page-blog-detail');
@@ -229,5 +234,19 @@ Route::get('/maps/leaflet', [ChartsController::class,'maps_leaflet'])->name('map
 Route::get('lang/{locale}', [LanguageController::class, 'swap']);
 
 Route::get('request-partner', [RequestPartnerController::class,'partner_list'])->name('request-partner');
+Route::post('allpartners', [RequestPartnerController::class,'allPartners'])->name('allpartners');
+Route::get('request-booker', [RequestBookerController::class,'booker_list'])->name('request-booker');
+Route::get('analytics', [AnalyticsController::class,'analytics'])->name('analytics');
+Route::get('content-management', [ContentManagementController::class,'content_list'])->name('content-management');
+Route::get('settings', [SettingController::class,'settings'])->name('settings');
+Route::get('getpartner/{partner_id}', [RequestPartnerController::class,'getPartner'])->name('getpartner');
+Route::post('partner-approval', [RequestPartnerController::class,'savePartner'])->name('partner-approval');
+Route::get('create-content', [ContentManagementController::class,'create_content'])->name('partner-approval');
+Route::post('create-content-api', [ContentManagementController::class,'store_content'])->name('create-content-api');
+Route::post('all-content-api', [ContentManagementController::class,'all_content'])->name('all-content-api');
+
+Route::get('sendSMS', [RequestPartnerController::class, 'index']);
+
+
 
 

@@ -111,6 +111,11 @@
     { "name": "Swiper", "url": "ext-component/swiper", "icon": "smartphone" },
     { "name": "Tree", "url": "ext-component/tree", "icon": "git-pull-request" },
     { "name": "Ratings", "url": "ext-component/ratings", "icon": "star" },
-    { "name": "Request Partner", "url": "request-partner", "icon": "user" }
+    { "name": "Request Partner", "url": "request-partner", "icon": "user" },
+    { "name": "Request Booker", "url": "request-booker", "icon": "user" },
+    { "name": "Analytics", "url": "analytics", "icon": "user" },
+    { "name": "Content Management", "url": "content-management", "icon": "user" },
+    { "name": "Settings", "url": "settings", "icon": "user" }
+
   ]
 }

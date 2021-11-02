@@ -2,6 +2,10 @@
 
 return [
   "Request Partner" => "Request Partner",
+  "Request Booker" => "Request Booker",
+  "Analytics" => "Analytics",
+  "Content Management" => "Content Management",
+  "Settings" => "Settings",
   "Apps & Pages" => "Apps & Pages",
   "User Interface" => "User Interface",
   "Dashboards" => "Dashboards",

@@ -14,7 +14,8 @@
     "guzzlehttp/guzzle": "^7.0.1",
     "laravel/framework": "^8.26.1",
     "laravel/tinker": "^2.5",
-    "laravel/ui": "^3.0"
+    "laravel/ui": "^3.0",
+    "twilio/sdk": "^6.29"
   },
   "require-dev": {
     "facade/ignition": "^2.5",
@@ -22,7 +23,8 @@
     "laravel/sail": "^1.0.1",
     "mockery/mockery": "^1.4.2",
     "nunomaduro/collision": "^5.0",
-    "phpunit/phpunit": "^9.3.3"
+    "phpunit/phpunit": "^9.3.3",
+    "theanik/laravel-more-command": "^1.2"
   },
   "config": {
     "optimize-autoloader": true,
