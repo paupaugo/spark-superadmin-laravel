@@ -1,0 +1,8 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/sparkph/
+    - /bin/cp -r * $DEPLOYPATH #copy all from root
+#    - /bin/cp -r ./public/* $DEPLOYPATH/public_html/super-admin
+    - /bin/cp ./public/js/*.js $DEPLOYPATH/public_html/super-adminjs
+    - /bin/cp ./public/css/*.css $DEPLOYPATH/public_html/super-admin/css
