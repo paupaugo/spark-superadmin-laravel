@@ -16,7 +16,7 @@ class PartnerRepository implements IPartnerRepository
                 $columns = array( 
                     0 =>'owner_id', 
                     1 =>'full_name',
-                    2=> 'owner_email',
+                    2=> 'email',
                     3=> 'owner_contact_no',
                     4=> 'owner_contact_no',
                     5=> 'salary',
@@ -28,7 +28,7 @@ class PartnerRepository implements IPartnerRepository
             $columns = array( 
                 0 =>'owner_id', 
                 1 =>'full_name',
-                2=> 'owner_email',
+                2=> 'email',
                 3=> 'owner_contact_no',
                 4=> 'owner_contact_no',
                 5=> 'owner_contact_no',
